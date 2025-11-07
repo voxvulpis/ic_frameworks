@@ -1,0 +1,39 @@
+datasources:
+  default:
+    url: jdbc:mysql://localhost:3306/mydatabase?createDatabaseIfNotExist=true
+    driverClassName: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: aluno
+    dialect: MYSQL
+    db-type: mysql
+    schema-generate: CREATE_DROP
+
+jpa:
+  default:
+    entity-scan:
+        packages: 'br.unesp.entity'
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true
+        format_sql: true
+        bytecode:
+          provider: none
+
+micronaut:
+  application:
+    name: micronaut-rest
+
+# datasources.default.username=root
+# datasources.default.password=aluno
+# datasources.default.db-type=mysql
+# datasources.default.dialect=MYSQL
+# micronaut.application.name=micronaut-rest
+# datasources.default.schema-generate=CREATE_DROP
+# jpa.default.properties.hibernate.hbm2ddl.auto=update
+# datasources.default.driver-class-name=com.mysql.cj.jdbc.Driver
+# datasources.default.url=jdbc:mysql://localhost:3306/mydatabase?createDatabaseIfNotExist=true
+
+# jpa.default.properties.hibernate.bytecode.provider=none
